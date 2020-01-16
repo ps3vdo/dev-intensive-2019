@@ -30,11 +30,6 @@ enum class TimeUnits{
     HOUR,
     DAY
 }
-fun Date.humanizeDiff(date:Date = Date(), lastVisit:Date): String{
-    val userOffLine:Date = this.time - lastVisit
-    when(userOffLine){
-        0..60 SECOND -> return "Был $"
+fun Date.humanizeDiff(){
+    TODO()
     }
-
-
-}
