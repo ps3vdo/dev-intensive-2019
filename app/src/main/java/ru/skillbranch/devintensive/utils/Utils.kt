@@ -10,7 +10,7 @@ object Utils {
     }
 
     fun transliteration(payload: String, divider: String = " "): String {
-        var initials = payload.replace(Regex("абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ")) {
+        val trans = payload.replace(Regex("[абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ ]")) {
                 when (it.value) {
                     "а" -> "a"
                     "б" -> "b"
@@ -82,12 +82,14 @@ object Utils {
                     else -> it.value
                 }
             }
-        return initials
+        return trans
     }
 
-    fun toInitials(firstName: String?, lastName: String?): String? {
-        val fName = firstName?.first().toString()
-        val lName = lastName?.first().toString()
+    fun toInitials(firstName: String?, lastName: String?): String {
+        val fName = if (firstName!=null) firstName.first().toString().toUpperCase()
+        else null
+        val lName = if (lastName!=null) lastName.first().toString().toUpperCase()
+        else  ""
         return "$fName$lName"
     }
 }
