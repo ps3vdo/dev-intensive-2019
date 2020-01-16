@@ -89,7 +89,7 @@ object Utils {
         val fName = if (firstName!=null) firstName.first().toString().toUpperCase()
         else null
         val lName = if (lastName!=null) lastName.first().toString().toUpperCase()
-        else  ""
+        else  null
         return "$fName$lName"
     }
 }
