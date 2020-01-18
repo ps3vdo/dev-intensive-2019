@@ -31,7 +31,7 @@ enum class TimeUnits{
 }
 
 fun Date.humanizeDiff(date:Date = Date()): String {
-    TODO()
+    return ":Бля буду, только вчера был"
 }
 //    val visit = date - lastVisit!!.time
 //    var s = visit * SECOND
