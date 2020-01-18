@@ -30,7 +30,7 @@ enum class TimeUnits{
     DAY
 }
 
-fun Dч(date:Date = Date()): String {
+fun Date.humanizeDiff(date:Date = Date()): String {
     TODO()
 }
 //    val visit = date - lastVisit!!.time
