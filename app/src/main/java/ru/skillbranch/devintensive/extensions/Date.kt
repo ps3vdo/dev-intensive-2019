@@ -1,6 +1,5 @@
 package ru.skillbranch.devintensive.extensions
 
-import ru.skillbranch.devintensive.models.User
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -30,6 +29,33 @@ enum class TimeUnits{
     HOUR,
     DAY
 }
-fun Date.humanizeDiff(){
+
+fun Dч(date:Date = Date()): String {
     TODO()
-    }
+}
+//    val visit = date - lastVisit!!.time
+//    var s = visit * SECOND
+//    return when(s){
+//      in 0..1 -> "только что"
+//      in 2..45 -> "несколько секунд назад"
+//      in 45..75 -> "минуту назад"
+//      in 75..2700 -> "несколько минут назад"
+//        else -> "только только был"}
+//      in 45мин - 75мин "час назад"
+//
+//      in     75мин 22ч "N часов назад"
+//
+//      in     22ч - 26ч "день назад"
+//
+//      in 26ч - 360д "N дней назад"
+//
+//      in         >360д "более года назад"
+
+
+
+
+
+
+
+
+
